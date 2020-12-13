@@ -23,7 +23,7 @@ Date created: 13<sup>th</sup> December 2020
 ```
 (3) Next, we load in the .csv file. You will see a file selection GUI appear, looking like this: 
 
-<img src="" alt="File selection GUI" width="500"/>  
+<img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/histogram/img/File%20selection.PNG?raw=true" alt="File selection GUI" width="500"/>  
 
 Using the GUI, select the .csv file containing the individual column of data you wish to analyse. 
 
@@ -50,4 +50,4 @@ This is achieved using the following code:
 
 (5) The rest of the code is designed to plot the histogram and display the n number associated with the dataset. You can see an example of the plot below: 
 
-<img src="" alt="The histogram" width="500"/>  
+<img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/histogram/img/histogram.png?raw=true" alt="The histogram" width="500"/>  
