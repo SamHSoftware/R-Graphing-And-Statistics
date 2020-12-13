@@ -2,7 +2,7 @@
 
 ## Author details: 
 Name: Sam Huguet  
-E-mail: samhuguet1@gmail.com
+E-mail: samhuguet1@gmail.com  
 Date created: 13<sup>th</sup> December 2020
 
 ## Description: 
@@ -25,7 +25,7 @@ Date created: 13<sup>th</sup> December 2020
 
 <img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/histogram/img/File%20selection.PNG?raw=true" alt="File selection GUI" width="500"/>  
 
-Using the GUI, select the .csv file containing the individual column of data you wish to analyse. 
+Using the GUI, select the .csv file containing the individual column of data you wish to analyse. You can find some example data [here](https://github.com/SamHSoftware/R-Graphing-And-Statistics/tree/master/histogram/data).
 
 This is achieved using the following code: 
 ```

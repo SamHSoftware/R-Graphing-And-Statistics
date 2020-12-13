@@ -1,3 +1,7 @@
+# This script is designed to create a histogram. It can be easily adapted to differnt data sets. 
+# Author: Sam Huguet  
+# E-mail: samhuguet1@gmail.com  
+# Date created: 13<sup>th</sup> December 2020
 
 # Loading in the necessary packages_________________________________
   
@@ -36,7 +40,7 @@
                        breaks = c(seq(min_x, max_x, by=binWidth)))+
     scale_y_continuous(limits = c(min_y,max_y), breaks = c(seq(min_y, max_y, by=5)))+
     ggtitle("Title")+
-    ylab("Number of occurences")+
+    ylab("Number of occurrences")+
     xlab("Condition")+
     annotation_custom(grob)+
     theme_bw()+
