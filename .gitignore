@@ -1,0 +1,8 @@
+**/__pycache__
+__pycache__/**
+
+.iypnb_checkpoints/**
+**/.ipynb_checkpoints
+
+..Rhistory/**
+**/.Rhistory
