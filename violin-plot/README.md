@@ -2,7 +2,7 @@
 
 ## Author details: 
 Name: Sam Huguet  
-E-mail: samhuguet1@gmail.com
+E-mail: samhuguet1@gmail.com  
 Date created: 14<sup>th</sup> December 2020
 
 ## Description: 
