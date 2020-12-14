@@ -20,11 +20,14 @@ library(ggplot2)
 library(ggsignif)
 library(grid)
 ```
-(3) Next, we sequentially load in the .csv files. This is explained within the code itself, but you will see a number of file selection GUIs appear, looking like this: 
+(3) Next, we sequentially load in the .csv files. 
 
-<img src="" alt="File selection GUI" width="500"/>  
+[You can find the example data here](https://github.com/SamHSoftware/R-Graphing-And-Statistics/tree/master/violin-plot/data).
+This step is explained within the code itself, but you will see a number of file selection GUIs appear, looking like this: 
 
-This is achieved using the following code: 
+<img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/violin-plot/img/File%20selection.PNG?raw=true" alt="File selection GUI" width="500"/>  
+
+You will need to select the control condition data, then that of the solvent control, followed by the treatment condition data. You can do this using the folowing code: 
 ```
 # LOAD CONTROL DATA SET_____________________________________________________________________________________
 datatable1 = file.choose()
@@ -63,4 +66,4 @@ colnames(df)[2] <- "Condition" # Rename the column.
 
 (5) The rest of the code is designed to calculate levels of statistical significance between conditions, and to plot the graph itself. Within the plotting code, there are may parameters which yuo may need to chage to optimise the graph's appearance. Here's an example of  the ouput. 
 
-<img src="" alt="The violin plot" width="500"/>  
+<img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/violin-plot/img/violin_plot.PNG?raw=true" alt="The violin plot" width="500"/>  
