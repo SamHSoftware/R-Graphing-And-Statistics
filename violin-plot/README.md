@@ -61,7 +61,7 @@ colnames(df)[2] <- "Condition" # Rename the column.
 
 (4) There's now a step which is needed so that you can control the order in which conditions appear within the graph. Notice that in the previous code block, the conditions are manually labelled as 'Control', 'Solvent Control' and 'Drug'. Now, with this piece of code, you can manually order the conditions as you choose: 
 ```
-# ORDER THE CONDITIONS MANUALLY____________________________________________________________________________
+# ORDER THE CONDITIONS MANUALLY_______________________________________________
   df$Condition <- factor(df$Condition, levels = c("Control", "Solvent Control", "Drug"))
 ```
 
