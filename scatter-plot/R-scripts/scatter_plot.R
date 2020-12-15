@@ -14,7 +14,7 @@
   library(ggplot2)
   library(Rmisc)
 
-# LOAD FIRST DATA SET______________________________________________________________________________ 
+# LOAD THE DATA SET______________________________________________________________________________ 
   
   # Viewing a file of our choice. 
   datatable = file.choose()
