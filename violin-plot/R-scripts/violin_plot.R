@@ -5,7 +5,7 @@
 
 # Author: Sam Huguet  
 # E-mail: samhuguet1@gmail.com  
-# Date created: 13<sup>th</sup> December 2020
+# Date created: 13th December 2020
 
 # PREAMBLE: LOAD IN NECESSARY PACKAGES_______________________________________________________________________
 library(ggplot2)
