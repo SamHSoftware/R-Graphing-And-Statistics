@@ -11,7 +11,7 @@ Date created: 15<sup>th</sup> December 2020
 
 ## How to use the R code: 
 
-(1) Open the ```violin_plot.R``` script. 
+(1) Open the ```scatter_plot.R``` script. 
 
 (2) Load in the necessary packages. Here, we use ggplot2, and Rmisc.
 ```
@@ -25,10 +25,7 @@ Unless you modify this script, your data will need to be composed of two columns
 
 [You can find the example data here](https://github.com/SamHSoftware/R-Graphing-And-Statistics/tree/master/scatter-plot/data).  
 
-When the code is run, you will see a file selection GUI apppear. With this, select you file for analysis.
-
-<img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/scatter-plot/img/File%20selection.PNG?raw=true" alt="File selection GUI" width="500"/>  
-
+When the code is run...
 ```
 # LOAD THE DATA SET____________________________________________________________
   # Viewing a file of our choice. 
@@ -40,7 +37,10 @@ When the code is run, you will see a file selection GUI apppear. With this, sele
   names(df1)[1] <- "Dependent"
   names(df1)[2] <- "Independent"
 ```
+... you will see a file selection GUI apppear. With this, select you file for analysis.
 
-(4) The rest of the code is designed to calculate the upper and lower bounds of 95% confidence intervals and standard deviations, and to plot the graph itself. Within the plotting code, there are may parameters which yuo may need to chage to optimise the graph's appearance. Here's an example of the ouput. 
+<img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/scatter-plot/img/File%20selection.PNG?raw=true" alt="File selection GUI" width="500"/>  
+
+(4) The rest of the code is designed to calculate the upper and lower bounds of 95% confidence intervals and standard deviations, and to plot the graph itself. Within the plotting code, there are may parameters which you may need to change to optimise the graph's appearance. Here's an example of the ouput. 
 
 <img src="https://github.com/SamHSoftware/R-Graphing-And-Statistics/blob/master/scatter-plot/img/scatter_plot.PNG?raw=true" alt="The scatter plot" width="500"/>  
