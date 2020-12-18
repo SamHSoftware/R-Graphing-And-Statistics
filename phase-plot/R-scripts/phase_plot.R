@@ -37,14 +37,14 @@
   df3 <- df3[,16] # Select period 1 column.
   df3 <- as.data.frame(df3) # Convert the matrix to a data frame.
   colnames(df3)[1] <- "Phase" # Rename the column. 
-  df3$Control <- 'Dexamethasone'
+  df3$Control <- 'Treatment'
 
 # VERTICALLY CONCATENATE ALL THE DATA SETS_________________________________________________________________
   df <- rbind(df1, df2, df3)
   colnames(df)[2] <- "Condition" # Rename the column. 
 
 # ORDER THE CONDITIONS MANUALLY____________________________________________________________________________
-  df$Condition <- factor(df$Condition, levels = c("Control", "Solvent Control", "Dexamethasone"))
+  df$Condition <- factor(df$Condition, levels = c("Control", "Solvent Control", "Treatment"))
   
   
 # PLOT THE DATA____________________________________________________________________________________________
@@ -58,7 +58,7 @@
   
   ggplot()+ 
     geom_histogram(data=df, 
-                   aes(x=Phase, fill=Condition, group=Condition, y=..density..), # ..ncount.. normalises highest peak of each group to 1.
+                   aes(x=Phase, fill=Condition, group=Condition, y=..density..), # ..ncount.. normalizes highest peak of each group to 1.
                                                                                  # ..density.. BEST METHOD: ensure that the area under each histogram is equal beterrn groups. 
                    alpha = 0.8,
                    binwidth=1,
@@ -67,7 +67,7 @@
                    breaks=seq(-1, 1, by = 0.1))+
     coord_polar()+
     ylab("Phase density")+
-    xlab(expression(paste("Cell cycle wave phases (", pi, ")")))+
+    xlab(expression(paste("Phase (", pi, ")")))+
     scale_x_continuous(breaks = c(seq(-0.8, 1, by=0.2)),
                        expand = c(.002,0))+
     scale_y_continuous(breaks = c(seq(0, 6, by=1)))+ # x labels.
@@ -84,7 +84,9 @@
           panel.border = element_rect(colour = "black", fill=NA, size=2),
           axis.line.x.bottom  = element_line(colour = "grey90"))
 
- # Perform statistical analysis: Kuiper test. 
+# Perform statistical analysis____________________________________________________________________
+  
+  # Select the data for analysis. 
   df1 = read.csv(datatable1)
   df1 <- df1[,16] # Select period 1 column.
   
@@ -94,13 +96,19 @@
   df3 = read.csv(datatable3)
   df3 <- df3[,16] # Select period 1 column.
   
-  #-----------------------------> Untreated v Solvent control
-  kuiper.2samp(df1,df2)
-  #-----------------------------> Untreated v Drug
-  kuiper.2samp(df1,df3)
-  #-----------------------------> Solvent control v Drug
-  kuiper.2samp(df2,df3)
+  # Control v Solvent control
+  CvSC <- kuiper.2samp(df1,df2)
 
-  print(length(df1))
-  print(length(df2))
-  print(length(df3))
+  # Control v Treatment
+  CvT <- kuiper.2samp(df1,df3)
+
+  # Solvent control v Treatment
+  SCvT <- kuiper.2samp(df2,df3)
+
+  # Print the results. 
+  cat('Kuiper 2 sample test performed for the control and solvent control data sets.\np value =', toString(CvSC[2]),
+      '\n\nKuiper 2 sample test performed for the control and treatment data sets.\np value =', toString(CvT[2]), 
+      '\n\nKuiper 2 sample test performed for the solvent control and treatment data sets.\np value =', toString(SCvT[2]))
+  
+
+  
