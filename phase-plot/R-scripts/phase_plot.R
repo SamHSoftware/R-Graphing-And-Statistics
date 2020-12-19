@@ -8,11 +8,10 @@
 
 # Author: Sam Huguet  
 # E-mail: samhuguet1@gmail.com  
-# Date created: 13th December 2020
+# Date created: 16th December 2020
 
 # PREAMBLE: LOAD IN NECESSARY PACKAGES_____________________________________________________________
   library(ggplot2)
-  library(grid)
   library(kuiper.2samp)
 
 # LOAD CONTROL DATA SET______________________________________________________________________________ 
@@ -48,14 +47,10 @@
   
   
 # PLOT THE DATA____________________________________________________________________________________________
-  
-  grob <- grobTree(textGrob("Mann-Whitney U test", x=0.54,  y=0.95, hjust=0,
-                            gp=gpar(col="black", fontsize=15, fontface="italic")))
-  
+
   xlabel <- paste('Cell cycle wave phase',expression(pi), sep = " ", collapse = NULL)
   textsize <- 25
 
-  
   ggplot()+ 
     geom_histogram(data=df, 
                    aes(x=Phase, fill=Condition, group=Condition, y=..density..), # ..ncount.. normalizes highest peak of each group to 1.
